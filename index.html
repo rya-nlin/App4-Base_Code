@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <head> 
 	<title>Hello World</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
@@ -38,8 +38,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var virusCount;
-	var foodCount;
+	var virusCount=0;
+	var foodCount =0;
 	function virusAdd()
 	{
 		virusCount = virusCount + 1;
@@ -131,8 +131,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class = "w3-container">
 		<p>Have you recently eaten raw/undercooked meat, seafood, or contaminated food?</p>
 	</div>
-	<a href="#five" onclick = "foodAdd();"class = "w3-btn w3-black w3-round-xxlarge">Yes</a>
-	<a href="#five" onclick = "virusAdd();"class = "w3-btn w3-black w3-round-xxlarge">No</a>
+	<a href="#five" onclick = "foodAdd(); showResults();"class = "w3-btn w3-black w3-round-xxlarge">Yes</a>
+	<a href="#five" onclick = "virusAdd(); showResults();"class = "w3-btn w3-black w3-round-xxlarge">No</a>
 </div>	
 <div class="page" id = "five">
 	<div class = "w3-container w3-flat-pumpkin">
