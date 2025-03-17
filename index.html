@@ -38,7 +38,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	var virusCount;
+	var foodCount;
+	function virusAdd()
+	{
+		virusCount = virusCount + 1;
+	}
+	function foodAdd()
+	{
+		foodCount = foodCount + 1;
+	}
+	function showResults()
+	{
+		var total = virusCount + foodCount;
+		var virus_pct = virusCount/total;
+		var food_pct = foodCount/total;
+		var text = "The probability it is food poisoning: " + food_pct*100 + "%" + "<br>The probability it is stomach virus: " + virus_pct*100 + "%";
+		var paragraph = document.getElementById("results");
+		paragraph.innerHTML = text;
+		
+	}
 
 </script>	
 
@@ -112,8 +131,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class = "w3-container">
 		<p>Have you recently eaten raw/undercooked meat, seafood, or contaminated food?</p>
 	</div>
-	<a href="#four" class = "w3-btn w3-black w3-round-xxlarge">Yes</a>
-	<a href="#four" class = "w3-btn w3-black w3-round-xxlarge">No</a>
+	<a href="#five" class = "w3-btn w3-black w3-round-xxlarge">Yes</a>
+	<a href="#five" class = "w3-btn w3-black w3-round-xxlarge">No</a>
 </div>	
+<div class="page" id = "five">
+	<div class = "w3-container w3-flat-pumpkin">
+		<h1>Results</h1>
+	</div>
+	<div class = "w3-container">
+		<p id = "results"></p>
+	</div>
+</div>
 </body>
 </html>
